@@ -28,8 +28,31 @@ namespace MediaTekDocuments.view
         {
             InitializeComponent();
             this.controller = new FrmMediatekController();
-            FrmAlerteFinAbonnement frmAlerteFinAbonnement = new FrmAlerteFinAbonnement();
-            frmAlerteFinAbonnement.ShowDialog();
+
+
+            if (Service.Libelle == "administratif" || Service.Libelle == "administrateur")
+            {
+                FrmAlerteFinAbonnement frmAlerteFinAbonnement = new FrmAlerteFinAbonnement(controller);
+                frmAlerteFinAbonnement.ShowDialog();
+            }
+            else if (Service.Libelle == "prêts")
+            {
+                tabOngletsApplication.TabPages.Remove(tabCmdLivres);
+                tabOngletsApplication.TabPages.Remove(tabCmdDvd);
+                tabOngletsApplication.TabPages.Remove(tabCmdRevues);
+
+                grpLivresInfos.Enabled = false;
+
+                grpDvdInfos.Enabled = false;
+
+                grpRevuesInfos.Enabled = false;
+
+                txbReceptionExemplaireNumero.Enabled = false;
+                dtpReceptionExemplaireDate.Enabled = false;
+                txbReceptionExemplaireImage.Enabled = false;
+                btnReceptionExemplaireImage.Enabled = false;
+                btnReceptionExemplaireValider.Enabled = false;
+            }
         }
 
         /// <summary>

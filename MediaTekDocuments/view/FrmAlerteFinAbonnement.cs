@@ -36,12 +36,8 @@ namespace MediaTekDocuments.view
             dgvFinAbonnements.Columns[1].HeaderCell.Value = "Titre";
         }
 
-        /// <summary>
-        /// Tri sur les colonnes
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void dgvAbonnementsAEcheance_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void dgvFinAbonnements_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string titreColonne = dgvFinAbonnements.Columns[e.ColumnIndex].HeaderText;
             List<Abonnement> sortedList = new List<Abonnement>();
@@ -57,12 +53,7 @@ namespace MediaTekDocuments.view
             RemplirAbonnementsAEcheance(sortedList);
         }
 
-        /// <summary>
-        /// Fermeture de la fenêtre d'alerte
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void btnOk_Click(object sender, EventArgs e)
+        private void btnConfirmationFinAbonnement_Click(object sender, EventArgs e)
         {
             this.Close();
         }

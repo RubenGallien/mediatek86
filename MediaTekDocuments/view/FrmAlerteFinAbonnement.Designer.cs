@@ -54,6 +54,7 @@ namespace MediaTekDocuments.view
             this.dgvFinAbonnements.RowTemplate.Height = 24;
             this.dgvFinAbonnements.Size = new System.Drawing.Size(595, 150);
             this.dgvFinAbonnements.TabIndex = 1;
+            this.dgvFinAbonnements.ColumnHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvFinAbonnements_ColumnHeaderMouseClick);
             // 
             // btnConfirmationFinAbonnement
             // 
@@ -63,6 +64,7 @@ namespace MediaTekDocuments.view
             this.btnConfirmationFinAbonnement.TabIndex = 2;
             this.btnConfirmationFinAbonnement.Text = "OK";
             this.btnConfirmationFinAbonnement.UseVisualStyleBackColor = true;
+            this.btnConfirmationFinAbonnement.Click += new System.EventHandler(this.btnConfirmationFinAbonnement_Click);
             // 
             // FrmAlerteFinAbonnement
             // 

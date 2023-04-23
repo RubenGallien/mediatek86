@@ -343,6 +343,21 @@ namespace MediaTekDocuments.dal
         }
 
         /// <summary>
+        /// Récupère l'utilisateur selon son login
+        /// </summary>
+        /// <param name="login"></param>
+        /// <returns>True si l'utilisateur est trouvé</returns>
+        public Utilisateur GetUtilisateur(string login)
+        {
+            List<Utilisateur> liste = TraitementRecup<Utilisateur>(GET, "utilisateur/" + login);
+            if (liste == null || liste.Count == 0)
+            {
+                return null;
+            }
+            return (liste[0]);
+        }
+
+        /// <summary>
         /// Traitement de la récupération du retour de l'api, avec conversion du json en liste pour les select (GET)
         /// </summary>
         /// <typeparam name="T"></typeparam>
