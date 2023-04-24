@@ -6,6 +6,8 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Linq;
 using System.Configuration;
+using Serilog;
+using Serilog.Formatting.Json;
 
 namespace MediaTekDocuments.dal
 {
@@ -18,6 +20,9 @@ namespace MediaTekDocuments.dal
         /// adresse de l'API
         /// </summary>
         private static readonly string uriApi = "http://localhost/rest_mediatekdocuments/";
+        /// <summary>
+        /// Nom de connexion à la base de donnée
+        /// </summary>
         private static readonly string connectionName = "MediaTekDocuments.Properties.Settings.mediatek86ConnectionString";
         /// <summary>
         /// instance unique de la classe
@@ -64,11 +69,19 @@ namespace MediaTekDocuments.dal
             try
             {
                 authenticationString = GetConnectionStringByName(connectionName);
+
+                Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Information()
+                .WriteTo.Console()
+                .WriteTo.File(new JsonFormatter(), "logs/log.txt",
+                rollingInterval: RollingInterval.Day)
+                .CreateLogger();
+
                 api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)
             {
-                Console.WriteLine(e.Message);
+                Log.Fatal("Access.Access catch connectionString={0} erreur={1}", connectionName, e.Message);
                 Environment.Exit(0);
             }
         }
@@ -210,6 +223,7 @@ namespace MediaTekDocuments.dal
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Log.Error("Access.CreerDocument catch jsonCreerDocument={0} erreur={1} ", jsonCreerCommande, ex.Message);
             }
             return false;
         }
@@ -235,6 +249,7 @@ namespace MediaTekDocuments.dal
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                Log.Error("Access.CreerCommandeDocument catch jsonCreerCommandeDocument={0} erreur={1} ", jsonCreerCommandeDocument, ex.Message);
             }
             return false;
         }
