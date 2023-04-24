@@ -18,6 +18,7 @@ namespace MediaTekDocuments.dal
         /// adresse de l'API
         /// </summary>
         private static readonly string uriApi = "http://localhost/rest_mediatekdocuments/";
+        private static readonly string connectionName = "MediaTekDocuments.Properties.Settings.mediatek86ConnectionString";
         /// <summary>
         /// instance unique de la classe
         /// </summary>
@@ -26,6 +27,7 @@ namespace MediaTekDocuments.dal
         /// instance de ApiRest pour envoyer des demandes vers l'api et recevoir la réponse
         /// </summary>
         private readonly ApiRest api = null;
+
         /// <summary>
         /// méthode HTTP pour select
         /// </summary>
@@ -43,6 +45,15 @@ namespace MediaTekDocuments.dal
         /// </summary>
         private const string DELETE = "DELETE";
 
+        static string GetConnectionStringByName(string name)
+        {
+            string value = null;
+            ConnectionStringSettings settings = ConfigurationManager.ConnectionStrings[name];
+            if (settings != null)
+                value = settings.ConnectionString;
+            return value;
+        }
+
         /// <summary>
         /// Méthode privée pour créer un singleton
         /// initialise l'accès à l'API
@@ -52,7 +63,7 @@ namespace MediaTekDocuments.dal
             String authenticationString;
             try
             {
-                authenticationString = "admin:adminpwd";
+                authenticationString = GetConnectionStringByName(connectionName);
                 api = ApiRest.GetInstance(uriApi, authenticationString);
             }
             catch (Exception e)
