@@ -1,0 +1,9 @@
+﻿C:\mediatek86\MediaTekDocuments\TestParutionAbonnement\TestParution.cs
+C:\mediatek86\MediaTekDocuments\TestParutionAbonnement\Properties\AssemblyInfo.cs
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\fr\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\fr\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\mediatek86\MediaTekDocuments\packages\MSTest.TestAdapter.2.1.2\build\_common\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\mediatek86\MediaTekDocuments\TestParutionAbonnement\packages.config
