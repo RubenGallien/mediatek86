@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestParutionAbonnement", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatekDocumentsModelsTests", "MediatekDocumentsModelsTests\MediatekDocumentsModelsTests.csproj", "{5632798C-97B1-4EF9-9F29-9754AFC80AB7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowMediatekDocuments", "SpecFlowMediatekDocuments\SpecFlowMediatekDocuments.csproj", "{6E5F2A9D-72EF-491F-AFA6-2A86D2B53D5D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{5632798C-97B1-4EF9-9F29-9754AFC80AB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5632798C-97B1-4EF9-9F29-9754AFC80AB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5632798C-97B1-4EF9-9F29-9754AFC80AB7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E5F2A9D-72EF-491F-AFA6-2A86D2B53D5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E5F2A9D-72EF-491F-AFA6-2A86D2B53D5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E5F2A9D-72EF-491F-AFA6-2A86D2B53D5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E5F2A9D-72EF-491F-AFA6-2A86D2B53D5D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
