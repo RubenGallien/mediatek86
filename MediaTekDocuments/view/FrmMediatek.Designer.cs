@@ -2749,10 +2749,11 @@ namespace MediaTekDocuments.view
             // 
             // pcbCmdImageDvd
             // 
-            this.pcbCmdImageDvd.Location = new System.Drawing.Point(694, 165);
+            this.pcbCmdImageDvd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pcbCmdImageDvd.Location = new System.Drawing.Point(694, 167);
             this.pcbCmdImageDvd.Margin = new System.Windows.Forms.Padding(4);
             this.pcbCmdImageDvd.Name = "pcbCmdImageDvd";
-            this.pcbCmdImageDvd.Size = new System.Drawing.Size(400, 161);
+            this.pcbCmdImageDvd.Size = new System.Drawing.Size(302, 159);
             this.pcbCmdImageDvd.TabIndex = 21;
             this.pcbCmdImageDvd.TabStop = false;
             // 
@@ -3128,6 +3129,7 @@ namespace MediaTekDocuments.view
             // 
             // pcbImageExCmdRevues
             // 
+            this.pcbImageExCmdRevues.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pcbImageExCmdRevues.Location = new System.Drawing.Point(786, 251);
             this.pcbImageExCmdRevues.Name = "pcbImageExCmdRevues";
             this.pcbImageExCmdRevues.Size = new System.Drawing.Size(444, 284);
@@ -3136,6 +3138,7 @@ namespace MediaTekDocuments.view
             // 
             // pcbImageCmdRevues
             // 
+            this.pcbImageCmdRevues.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pcbImageCmdRevues.Location = new System.Drawing.Point(786, 38);
             this.pcbImageCmdRevues.Name = "pcbImageCmdRevues";
             this.pcbImageCmdRevues.Size = new System.Drawing.Size(217, 154);

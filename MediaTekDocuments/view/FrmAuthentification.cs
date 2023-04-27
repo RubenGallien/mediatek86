@@ -14,14 +14,25 @@ namespace MediaTekDocuments.view
 {
     public partial class FrmAuthentification : Form
     {
+        /// <summary>
+        /// classe d'affichage de la fenetre d'authentification
+        /// </summary>
         private FrmAuthentificationController controller;
 
+        /// <summary>
+        /// constructeur : création du controller lié à ce formulaire
+        /// </summary>
         public FrmAuthentification()
         {
             InitializeComponent();
             this.controller = new FrmAuthentificationController();
         }
 
+        /// <summary>
+        /// Connexion à l'application en fonction de l'utilisateur et mdp saisis
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnAuthentificationConnexion_Click(object sender, EventArgs e)
         {
             string utilisateur = txbAuthentificationUser.Text;

@@ -8,10 +8,18 @@ using MediaTekDocuments.controller;
 
 namespace MediaTekDocuments.view
 {
+    /// <summary>
+    /// Classe d'affichage de l'alerte de fin d'abonnement
+    /// </summary>
     public partial class FrmAlerteFinAbonnement : Form
     {
         private readonly BindingSource bdgAbonnementsAEcheance = new BindingSource();
         private readonly List<Abonnement> lesAbonnementsAEcheance = new List<Abonnement>();
+
+        /// <summary>
+        /// Constructeur : création du contrôleur lié à ce formulaire
+        /// </summary>
+        /// <param name="controller"></param>
         public FrmAlerteFinAbonnement(FrmMediatekController controller)
         {
             InitializeComponent();
@@ -36,7 +44,11 @@ namespace MediaTekDocuments.view
             dgvFinAbonnements.Columns[1].HeaderCell.Value = "Titre";
         }
 
-
+        /// <summary>
+        /// tri de la liste
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void dgvFinAbonnements_ColumnHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             string titreColonne = dgvFinAbonnements.Columns[e.ColumnIndex].HeaderText;
@@ -53,6 +65,11 @@ namespace MediaTekDocuments.view
             RemplirAbonnementsAEcheance(sortedList);
         }
 
+        /// <summary>
+        /// fermeture de la fenetre d'alerte
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnConfirmationFinAbonnement_Click(object sender, EventArgs e)
         {
             this.Close();
